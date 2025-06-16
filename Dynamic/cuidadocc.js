@@ -21,65 +21,67 @@ let val9=0;
 
 boton1.addEventListener("click",()=>{
     val1+=100;
-    let valor="Playera azul $100"+val1;
+    let valor="Playera azul $100";
     actcarrito(valor);
 
 });
 boton2.addEventListener("click",()=>{
     val2+=100;
-    let valor="Playera blanca $100"+val2;
+    let valor="Playera blanca $100";
     actcarrito(valor);
 
 });
 boton3.addEventListener("click",()=>{
     val3+=150;
-    let valor="Playera rosa $150"+val3;
+    let valor="Playera rosa $150";
     actcarrito(valor);
 
 });
 boton4.addEventListener("click",()=>{
     val4+=300;
-    let valor="Sudadera roja$300"+val4;
+    let valor="Sudadera roja$300";
     actcarrito(valor);
 
 });
 boton5.addEventListener("click",()=>{
     val5+=250;
-    let valor="Sudadera negra $250"+val5;
+    let valor="Sudadera negra $250";
     actcarrito(valor);
 
 });
 boton6.addEventListener("click",()=>{
     val6+=400;
-    let valor="Sudadera blanca $400"+val6;
+    let valor="Sudadera blanca $400";
     actcarrito(valor);
 
 });
 boton7.addEventListener("click",()=>{
     val7+=200;
-    let valor="Pantalon azul $200"+val7;
+    let valor="Pantalon azul $200";
     actcarrito(valor);
 
 });
 boton8.addEventListener("click",()=>{
     val8+=200;
-    let valor="PPantalon cafe $200"+val8;
+    let valor="PPantalon cafe $200";
     actcarrito(valor);
 
 });
 boton9.addEventListener("click",()=>{
     val9+=300;
-    let valor="Pantalon negro $300"+val9;
+    let valor="Pantalon negro $300";
     actcarrito(valor);
 });
 
-let total=(val1+val2+val3+val4+val5+val6+val7+val8+val9);
 
 let carrito=document.getElementById("carrito");
 
 function actcarrito(valor){
-    let contenido=document.createElement("div");  
+    let contenido=document.createElement("div"); 
+    let pago=document.getElementById("total");
+    let total=(val1+val2+val3+val4+val5+val6+val7+val8+val9);
     contenido.textContent= valor;
+    pago.textContent=total;
     carrito.append(contenido);
 
 }
